@@ -137,11 +137,21 @@ body {
 
   .place-textarea {
     display: grid;
+    
   }
   
   .place-textarea textarea {
     padding: 10px;
+    
   }
+
+  #sugest {
+    width: 100%;
+    height: 250px;
+    resize: none;
+  }
+
+
 
   button {
     width: 100%;
