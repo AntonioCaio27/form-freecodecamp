@@ -4,94 +4,108 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
     <title>Formulário</title>
 </head>
 
-<!-- INICIALMENTE VOU DEIXAR O HEADER FORA DO FORM ATÉ DESCOBRIR UMA MELHOR FORMA DE TRABALHAR COM ELE  -->
+<body>
 
-<header>
-    <h1 id="titulo">Queremos te conhecer melhor</h1>
-    <p id="preencha">Preencha o formulário e te enviaremos uma proposta que melhor se adeque a sua necessidade.</p>
-</header>
+   
 
-<form class="form-pesquisa">
-
-    <label id="id-name" for="Nome">Nome</label>
-    <input type="text" id="name" class="main-form" placeholder="Digite aqui seu nome" required>
-
-    <label id="id-email" for="Email">Email</label>
-    <input type="email" id="email" class="main-form" placeholder="Informe aqui seu email" required>
-
-    <label id="id-idade" for="Idade">Idade</label>
-    <input type="number" id="idade" class="main-form" placeholder="Idade" min="15" m max="#" required>
+    <header>
+        <h1 id="titulo">Queremos te conhecer melhor</h1>
+        <p id="preencha">Preencha o formulário e te enviaremos uma proposta que melhor se adeque a sua necessidade.</p>
+    </header>
 
 
-    <select id="form-drop" name="drop" class="main-form" required>
-        <option value="desabilitado">Escolha sua opção</option>
-        <option value="estudante">Estudante</option>
-        <option value="profissional-clt">Profissional CLT</option>
-        <option value="funcionario-publico">Funcionário Público</option>
-        <option value="freelancer">Freelancer</option>
-        <option value="outros">Outros</option>
+    <div class="container">
+    <form class="form-pesquisa">
 
-    </select>
 
-    <p>Qual a finalidade do curso?</p>
-    <label>
-        <input name="finalidade" value="Transicao-de-carreira" type="radio" class="input-radio" checked>
-        Transição de Carreira
-    </label>
-    <label>
-        <input name="finalidade" value="Especializacao" type="radio" class="input-radio" checked>
-        Especialização
-    </label>
-    <label>
-        <input name="finalidade" value="Curriculo" type="radio" class="input-radio" checked>
-        Incrementar o currículo
-    </label>
-    <label>
-        <input name="finalidade" value="Conhecimento" type="radio" class="input-radio" checked>
-        Aquirir conhecimento
-    </label>
+<div class="main-form"> 
+        <label id="id-name" for="Nome">Nome</label>
+        <input type="text" id="name" placeholder="Digite aqui seu nome" required>
+</div>
 
-    <p>Qual a sua disponibilidade de horário?</p>
+<div class="main-form"> 
+        <label id="id-email" for="Email">Email</label>
+        <input type="email" id="email" class="main-form" placeholder="Informe aqui seu email" required>
+</div>
+
+<div class="main-form"> 
+        <label id="id-idade" for="Idade">Idade</label>
+        <input type="number" id="idade" class="main-form" placeholder="Idade" min="15" max="90" required>
+</div>   
+    
+<div class="main-form"> 
+        <select id="form-drop" name="drop" class="main-form" required>
+            <option value="desabilitado">Selecione uma opção</option>
+            <option value="estudante">Estudante</option>
+            <option value="profissional-clt">Profissional CLT</option>
+            <option value="funcionario-publico">Funcionário Público</option>
+            <option value="freelancer">Freelancer</option>
+            <option value="outros">Outros</option>
+           
+        </select>
+</div> 
+
+
+<div class="final-checkbox">
+
+        <p>Qual a finalidade do curso?</p>
+        <label>
+            <input name="finalidade" value="Transicao-de-carreira" type="radio" class="botao-check" checked>
+            Transição de Carreira
+        </label>
+        <label>
+            <input name="finalidade" value="Especializacao" type="radio" class="botao-check" checked>
+            Especialização
+        </label>
+        <label>
+            <input name="finalidade" value="" type="radio" class="botao-check" checked>
+            Incrementar o currículo
+        </label>
+        <label>
+            <input name="finalidade" value="Medico" type="radio" class="botao-check" checked>
+            Aquirir conhecimento
+        </label>
+    </div>
+
+    <div class="main-form"> 
+        <p>Qual a sua disponibilidade de horário?</p>
         
-    <select id="horario" name="horario" class="form-horario" required="">
-        <option disabled="" selected="" value="">Selecione uma opção</option>
-        <option value="manha">Manha</option>
-        <option value="tarde">Tarde</option>
-        <option value="noite">Noite</option>
-        <option value="todo"> O dia todo</option>
-    </select>
+        <select id="horario" name="horario" class="form-horario" required="">
+            <option disabled="" selected="" value="">Selecione uma opção</option>
+            <option value="manha">Manha</option>
+            <option value="tarde">Tarde</option>
+            <option value="noite">Noite</option>
+            <option value="todo"> O dia todo</option>
+        </select>
+    </div>
 
+    <div class="final-checkbox">
+        <p> O que você gostaria de aprender?</p>
 
-    <p> O que você gostaria de aprender?</p>
+        <label><input name="curso" value="designer" type="checkbox" class="botao-check">Designer gráfico</label>
+        <label><input name="curso" value="marketing" type="checkbox" class="botao-check">Marketing digital</label>
+        <label><input name="curso" value="programacao" type="checkbox" class="botao-check">Programação Fullstack</label>
+        <label><input name="curso" value="trafego" type="checkbox" class="botao-check">Tráfego Pago</label>
+        <label><input name="curso" value="sociais" type="checkbox" class="botao-check">Gestão de redes sociais</label>
+        <label><input name="curso" value="power-bi" type="checkbox" class="botao-check">Power BI</label>
+        <label><input name="curso" value="interface" type="checkbox" class="botao-check">UX/UI Design</label>
+        <label><input name="curso" value="customer" type="checkbox" class="botao-check">Customer Success</label>
+        <label><input name="curso" value="data" type="checkbox" class="botao-check">Data Analytics</label>
+        <label><input name="curso" value="gestao" type="checkbox" class="botao-check">Gestão e Governança de T.I</label> 
+    </div>
 
-    <label><input name="curso" value="designer" type="checkbox" class="botao-check">Designer gráfico</label>
-    <label><input name="curso" value="marketing" type="checkbox" class="botao-check">Marketing digital</label>
-    <label><input name="curso" value="programacao" type="checkbox" class="botao-check">Programação Fullstack</label>
-    <label><input name="curso" value="trafego" type="checkbox" class="botao-check">Tráfego Pago</label>
-    <label><input name="curso" value="sociais" type="checkbox" class="botao-check">Gestão de redes sociais</label>
-    <label><input name="curso" value="power-bi" type="checkbox" class="botao-check">Power BI</label>
-    <label><input name="curso" value="interface" type="checkbox" class="botao-check">UX/UI Design</label>
-    <label><input name="curso" value="customer" type="checkbox" class="botao-check">Customer Success</label>
-    <label><input name="curso" value="data" type="checkbox" class="botao-check">Data Analytics</label>
-    <label><input name="curso" value="gestao" type="checkbox" class="botao-check">Gestão e Governança de T.I</label> 
+<div class="place-textarea">
+        <p>Faltou algum curso na lista? Mande a sua sugestão!</p>
+        <textarea id="sugest"  name="comentarios" placeholder="Sugestões aqui!"></textarea>
+</div>
 
-    <p>Faltou algum curso na lista? Mande a sua sugestão!</p>
-    <textarea id="dicas" class="textarea" name="comentarios" placeholder="Sugestões aqui!"></textarea>
-    <button type="submit" id="submit" class="button-submit">
-        Enviar
-    </button>
-
-
-
-
-
-
-
-
+        <button type="submit" id="submit" class="button-submit">
+            Enviar
+        </button>
 
 
 
@@ -102,18 +116,9 @@
 
 
 
+    </form>
 
+</div>
+</body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-</form>
+</html>
